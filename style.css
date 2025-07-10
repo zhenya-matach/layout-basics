@@ -41,7 +41,7 @@ footer{
 }
 
 .container{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     margin: 0 auto;
     width: 100%;
     max-width: 1170px;
@@ -105,7 +105,10 @@ h1{
     text-align: center;
     color: #2f2e41;
     margin-bottom: 40px;
-    max-height: 181px;
+}
+
+.card-title.small{
+    max-width: 180px;
 }
 
 .card-img{
@@ -134,6 +137,7 @@ footer a{
     display: flex;
     align-items: center;
     gap: 10px;
+    white-space: nowrap;
 }
 
 
@@ -142,12 +146,51 @@ footer a{
         padding: 46px 0 50px;
     }
 
-    h1{
-        font-weight: 700;
-        font-size: 36px;
-        text-transform: uppercase;
-        color: #2f2e41;
-        margin-bottom: 70px;
-        text-align: center;
+    .card-title.small{
+        max-width: max-content;
     }
+
+    h1{
+        font-size: 36px;
+        margin-bottom: 46px;
+    }
+
+    .links-list{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo{
+        width: 160px;
+    }
+
+    .main-section{
+        padding-top: 44px;
+    }
+
+    h1{
+        font-size: 28px;
+        margin-bottom: 36px;
+    }
+
+    footer {
+        height: 140px;
+    }
+
+    .links-list{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:space-between;
+        gap: 20px 0;
+    }
+
+    li{
+        width: 50%;
+    }
+
+    footer .container{
+        padding: 20px 15px;
+    }
+
 }
